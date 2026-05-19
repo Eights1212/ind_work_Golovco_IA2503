@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>Budget Tracker</h1>
+    <div class="summary">
+      <div class="card">Баланс: <span id="balance">0</span> лей</div>
+      <div class="card">Записей: <span id="count">0</span></div>
+    </div>
+    <div class="toolbar">
+      <input id="searchInput" placeholder="Поиск по названию">
+      <button id="openModal">Добавить</button>
+      <button id="sortAmount">Сортировать по сумме</button>
+    </div>
+    <div class="filters">
+      <button data-filter="all">Все</button>
+      <button data-filter="income">Доход</button>
+      <button data-filter="expense">Расход</button>
+    </div>
+    <p id="msg"></p>
+    <div id="list"></div>
+  </div>
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <h2>Новая запись</h2>
+      <input id="titleInput" placeholder="Название">
+      <input id="amountInput" type="number" placeholder="Сумма">
+      <select id="typeInput">
+        <option value="income">Доход</option>
+        <option value="expense">Расход</option>
+      </select>
+      <div class="modal-actions">
+        <button id="saveBtn">Сохранить</button>
+        <button id="closeBtn">Закрыть</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
