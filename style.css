@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+}
+.app {
+  max-width: 850px;
+  margin: auto;
+  padding: 25px;
+}
+h1 {
+  text-align: center;
+}
+.summary {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.card {
+  flex: 1;
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 12px;
+}
+.toolbar, .filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+input, select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+input, select {
+  flex: 1;
+}
+button {
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+.record {
+  background: #1f2937;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.income {
+  border-left: 5px solid #10b981;
+}
+.expense {
+  border-left: 5px solid #ef4444;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-box {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hidden {
+  display: none;
+}
+#msg {
+  color: #f87171;
+}
+@media(max-width: 650px){
+  .summary {
+    flex-direction: column;
+  }
+}
